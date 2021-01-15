@@ -1,5 +1,7 @@
 import * as msg from "../messages/messages";
 
-export const saveInput = (_data) => ({msg:msg.SAVE_INPUT, payload:_data});
-export const editRecord = (_data) => ({msg:msg.EDIT_RECORD, payload:_data});
-export const cancelInput = (_data) => ({msg:msg.CANCEL_INPUT, payload:_data});
+export const saveRecord = (_data) => {
+  console.log("SAVE RECORD TRIGGERED");
+  return {type:msg.SAVE_RECORD,payload:_data}
+};
+export const deleteRecord = (_data) => ({type:msg.DELETE_RECORD, payload:_data});
